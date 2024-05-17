@@ -1,10 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import TelaDeLogin from './Routes/TelaDeLogin';
+import Cadastrar from './Routes/Cadastrar';
+import CadastrarCentroEcologico from './Routes/CadastrarCentroEcologico';
+import CadastrarCatadores from './Routes/CadastrarCatadores';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <TelaDeLogin />,
+  },
+  {
+    path: "Cadastrar",
+    element: <Cadastrar />,
+  },
+  {
+    path: "CadastrarCentroEcologico",
+    element: <CadastrarCentroEcologico />,
+  },
+  {
+    path: "CadastrarCatadores",
+    element: <CadastrarCatadores />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
