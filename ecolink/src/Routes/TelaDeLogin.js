@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logoImg from '../assets/Green Simple Eco Energy Logo (1).png';
 import '../styles/styleTelaDeLogin.css'; // Importa o arquivo CSS
 
 function TelaDeLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // Função para lidar com o clique no botão de login
+  const handleLogin = () => {
+    // Aqui você pode adicionar lógica para validar o email e a senha, se necessário
+
+    // Redireciona para a página de início
+    window.location.href = "/inicio";
+  };
 
   return (
     <div className="container">
@@ -32,11 +41,12 @@ function TelaDeLogin() {
               <span className="focus-input" data-placeholder="Password"></span>
             </div>
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+              {/* Use o Link para redirecionar para a página de início */}
+              <button className="login-form-btn" onClick={handleLogin}>Login</button>
             </div>
             <div className="text-center">
               <span className="txt">Não possui conta?</span>
-              <a className="txt2" href="/Cadastrar">Criar conta</a>
+              <Link className="txt2" to="/Cadastrar">Criar conta</Link> {/* Use o Link para navegar para a página de cadastro */}
             </div>
           </div>
         </div>
