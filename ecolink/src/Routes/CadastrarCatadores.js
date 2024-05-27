@@ -12,7 +12,6 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom'; // Importa o hook useNavigate
-import '../styles/styleFormularioCatadores.css'; // Importe o CSS para estilização
 
 function CadastrarCatadores() {
   const [nome, setNome] = useState('');

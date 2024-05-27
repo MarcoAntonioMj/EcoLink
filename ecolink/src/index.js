@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ChakraProvider } from "@chakra-ui/react";
 import TelaDeLogin from './Routes/TelaDeLogin';
-import TelaDeInicio from './Routes/TelaDeInicio';
+import TelaDeInicio from './Routes/TelaDeInicio'; // Importação da tela de início descomentada
 import Cadastrar from './Routes/Cadastrar';
 import CadastrarCentroEcologico from './Routes/CadastrarCentroEcologico';
 import CadastrarCatadores from './Routes/CadastrarCatadores';
@@ -18,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<TelaDeLogin />} />
           <Route path="/inicio" element={isAutenticado ? <TelaDeInicio /> : <Navigate to="/" />} />
+          {/* Rota da tela de início */}
           <Route path="/Cadastrar" element={<Cadastrar />} />
           <Route path="/CadastrarCentroEcologico" element={<CadastrarCentroEcologico />} />
           <Route path="/CadastrarCatadores" element={<CadastrarCatadores />} />
