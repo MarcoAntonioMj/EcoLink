@@ -27,35 +27,37 @@ const Procurar = () => {
   };
 
   return (
-    <div className={styles.procurarContainer}>
-      <Menu /> {/* Renderize o componente Menu */}
-      <div className={styles.procurarForm}>
-        <h1>Procurar</h1>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>
-              <input type="checkbox" value="Papel" onChange={handleMaterialChange} />
-              Papel
-            </label>
-            <label>
-              <input type="checkbox" value="Plástico" onChange={handleMaterialChange} />
-              Plástico
-            </label>
-            <label>
-              <input type="checkbox" value="Vidro" onChange={handleMaterialChange} />
-              Vidro
-            </label>
-            {/* Adicione mais materiais conforme necessário */}
-          </div>
-          <div>
-            <label>
-              CEP:
-              <input type="text" value={cep} onChange={handleCepChange} />
-            </label>
-          </div>
-          <button type="submit">Procurar</button>
-        </form>
-        {/* Aqui você pode exibir a lista de resultados após a busca */}
+    <div>
+      <Menu /> {/* Renderize o componente Menu fora do contêiner procurarContainer */}
+      <div className={styles.procurarContainer}>
+        <div className={styles.procurarForm}>
+          <h1>Procurar</h1>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>
+                <input type="checkbox" value="Papel" onChange={handleMaterialChange} />
+                Papel
+              </label>
+              <label>
+                <input type="checkbox" value="Plástico" onChange={handleMaterialChange} />
+                Plástico
+              </label>
+              <label>
+                <input type="checkbox" value="Vidro" onChange={handleMaterialChange} />
+                Vidro
+              </label>
+              {/* Adicione mais materiais conforme necessário */}
+            </div>
+            <div>
+              <label>
+                CEP:
+                <input type="text" value={cep} onChange={handleCepChange} />
+              </label>
+            </div>
+            <button type="submit">Procurar</button>
+          </form>
+          {/* Aqui você pode exibir a lista de resultados após a busca */}
+        </div>
       </div>
     </div>
   );
