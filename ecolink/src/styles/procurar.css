@@ -1,0 +1,58 @@
+/* procurar.css */
+
+.procurarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura total da tela */
+}
+
+.procurarOuter {
+  width: 100%; /* Utilize toda a largura disponível */
+  max-width: 600px; /* Defina uma largura máxima para o formulário de procura */
+}
+
+.procurarForm {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao formulário */
+}
+
+.procurarForm h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.procurarForm div {
+  margin-bottom: 20px;
+}
+
+.procurarForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.procurarForm input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.procurarForm input[type="text"],
+.procurarForm button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.procurarForm button {
+  background-color: #207f16;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.procurarForm button:hover {
+  background-color: #155e11;
+}

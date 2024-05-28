@@ -8,6 +8,8 @@
   justify-content: space-between;
   padding: 20px;
   border-right: 1px solid #ddd;
+  position: fixed; /* Fixar o menu à esquerda */
+  height: 100vh; /* Altura total da tela */
 }
 
 .menu-logo img {
