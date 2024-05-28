@@ -1,32 +1,17 @@
 // TelaDeInicio.js
 
 import React from 'react';
+import Menu from './Menu'; // Importe o componente Menu
 import '../styles/styleTelaDeInicio.css'; // Importe o arquivo de estilo
 
 const TelaDeInicio = () => {
-  const logout = () => {
-    alert("Saindo...");
-    // Adicione aqui a lógica para sair, como redirecionar para uma página de login
+  const handleLogout = () => {
+    // Adicione aqui a lógica para o logout, como redirecionar para a tela de login
   };
 
   return (
     <div className="tela-de-inicio-container">
-      <div className="tela-de-inicio-navbar">
-        <img src="assets/img/logo.svg" alt="Logo" className="tela-de-inicio-logo" />
-        <nav className="tela-de-inicio-menu">
-          <ul>
-            <li><a href="procurar.html" className="menu-link">Procurar</a></li>
-            <li><a href="Perfil.html" className="menu-link">Perfil</a></li>
-          </ul>
-        </nav>
-        <nav className="tela-de-inicio-menu-bottom">
-          <ul>
-            <li><a href="informacoes.html" className="menu-link">Informações</a></li>
-            <li><a href="configuracoes.html" className="menu-link">Configurações</a></li>
-            <li><button onClick={logout} className="logout-button">Sair</button></li>
-          </ul>
-        </nav>
-      </div>
+      <Menu onLogout={handleLogout} /> {/* Renderize o componente Menu */}
       <div className="tela-de-inicio-main-content">
         <div className="tela-de-inicio-title">
           <h1>ECOLINK</h1>
