@@ -1,20 +1,6 @@
-// src/Routes/CadastrarCentroEcologico.js
-
 import React, { useState } from 'react';
-import {
-  Flex,
-  Box,
-  Center,
-  FormControl,
-  Input,
-  FormLabel,
-  HStack,
-  Checkbox,
-  CheckboxGroup,
-  Button,
-} from "@chakra-ui/react";
-import { useNavigate } from 'react-router-dom'; // Importa o hook useNavigate
-import '../styles/styleCadastrar.css'; // Importe o CSS para estilização
+import { useNavigate } from 'react-router-dom'; 
+import '../styles/CadastrarCentroEcologico.css'
 
 const materiais = [
   'Papel',
@@ -54,181 +40,126 @@ function CadastrarCentroEcologico() {
   };
 
   return (
-    <Box h="100vh">
-      <Center
-        as="header"
-        h={150}
-        bg="linear-gradient(to left, #207f16, #103f0b)"
-        color="white"
-        fontWeight="bold"
-        fontSize="4xl"
-        pb="8"
-      >
+    <div className="centro-ecologico-container">
+      <header className="centro-ecologico-header">
         Cadastro de Centro Ecológico
-      </Center>
-      <Flex
-        align="center"
-        justify="center"
-        bg="blackAlpha.200"
-        h="calc(100vh - 150px)"
-      >
-        <Center
-          w="100%"
-          maxW={840}
-          bg="white"
-          top={100}
-          position="absolute"
-          borderRadius={5}
-          p="6"
-          boxShadow="0 1px 2px #ccc"
-        >
-          <FormControl as="form" onSubmit={handleSubmit} display="flex" flexDir="column" gap="4">
-            <HStack spacing="4">
-              <Box w="100%">
-                <FormLabel htmlFor="nome">Razão Social</FormLabel>
-                <Input
-                  id="nome"
-                  value={nome}
-                  onChange={(e) => setNome(e.target.value)}
-                />
-              </Box>
-              <Box w="100%">
-                <FormLabel htmlFor="nasc">Data de Fundação</FormLabel>
-                <Input
-                  id="nasc"
-                  type="date"
-                  value={nascimento}
-                  onChange={(e) => setNascimento(e.target.value)}
-                />
-              </Box>
-            </HStack>
-            <HStack spacing="4">
-              <Box w="100%">
-                <FormLabel htmlFor="email">E-mail</FormLabel>
-                <Input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </Box>
-            </HStack>
-            <HStack spacing="4">
-              <Box w="100%">
-                <FormLabel htmlFor="cel">Celular</FormLabel>
-                <Input
-                  id="cel"
-                  type="number"
-                  value={celular}
-                  onChange={(e) => setCelular(e.target.value)}
-                />
-              </Box>
-              <Box w="100%">
-                <FormLabel htmlFor="telefone">Telefone</FormLabel>
-                <Input
-                  id="telefone"
-                  type="number"
-                  value={telefone}
-                  onChange={(e) => setTelefone(e.target.value)}
-                />
-              </Box>
-            </HStack>
-            <HStack spacing="4">
-              <Box w="100%">
-                <FormLabel htmlFor="endereco">Endereço</FormLabel>
-                <Input
-                  id="endereco"
-                  value={endereco}
-                  onChange={(e) => setEndereco(e.target.value)}
-                />
-              </Box>
-              <Box w="100%">
-                <FormLabel htmlFor="cidade">Cidade</FormLabel>
-                <Input
-                  id="cidade"
-                  value={cidade}
-                  onChange={(e) => setCidade(e.target.value)}
-                />
-              </Box>
-            </HStack>
-            <HStack spacing="4">
-              <Box w="100%">
-                <FormLabel htmlFor="cep">CEP</FormLabel>
-                <Input
-                  id="cep"
-                  value={cep}
-                  onChange={(e) => setCep(e.target.value)}
-                />
-              </Box>
-              <Box w="100%">
-                <FormLabel htmlFor="senha">Senha</FormLabel>
-                <Input
-                  id="senha"
-                  type="password"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
-                />
-              </Box>
-            </HStack>
-            <HStack spacing="4">
-              <Box w="100%">
-                <FormLabel htmlFor="cnpj">CNPJ</FormLabel>
-                <Input
-                  id="cnpj"
-                  value={cnpj}
-                  onChange={(e) => setCnpj(e.target.value)}
-                />
-              </Box>
-            </HStack>
-            <HStack spacing="4">
-              <Box w="100%">
-                <FormLabel>Materiais Aceitos</FormLabel>
-                <CheckboxGroup
-                  value={materiaisAceitos}
-                  onChange={(values) => setMateriaisAceitos(values)}
-                >
-                  <HStack spacing="24px" wrap="wrap">
-                    {materiais.map((material) => (
-                      <Checkbox key={material} value={material}>
-                        {material}
-                      </Checkbox>
-                    ))}
-                  </HStack>
-                </CheckboxGroup>
-              </Box>
-            </HStack>
-            <HStack justify="center" spacing="4">
-              <Button
-                w={240}
-                p="6"
-                type="submit"
-                bg="linear-gradient(to left, #207f16, #103f0b)"
-                color="white"
-                fontWeight="bold"
-                fontSize="xl"
-                mt="2"
-                _hover={{ bg: "linear-gradient(to left, #207f16, #103f0b)" }}
-              >
-                Enviar
-              </Button>
-              <Button
-                w={240}
-                p="6"
-                bg="linear-gradient(to left, #207f16, #103f0b)"
-                color="white"
-                fontWeight="bold"
-                fontSize="xl"
-                mt="2"
-                _hover={{ bg: "linear-gradient(to left, #207f16, #103f0b)" }}
-                onClick={handleBack}
-              >
-                Voltar
-              </Button>
-            </HStack>
-          </FormControl>
-        </Center>
-      </Flex>
-    </Box>
+      </header>
+      <div className="centro-ecologico-form-container">
+        <form onSubmit={handleSubmit} className="centro-ecologico-form">
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="nome">Razão Social</label>
+            <input
+              id="nome"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="nasc">Data de Fundação</label>
+            <input
+              id="nasc"
+              type="date"
+              value={nascimento}
+              onChange={(e) => setNascimento(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="email">E-mail</label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="cel">Celular</label>
+            <input
+              id="cel"
+              type="number"
+              value={celular}
+              onChange={(e) => setCelular(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="telefone">Telefone</label>
+            <input
+              id="telefone"
+              type="number"
+              value={telefone}
+              onChange={(e) => setTelefone(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="endereco">Endereço</label>
+            <input
+              id="endereco"
+              value={endereco}
+              onChange={(e) => setEndereco(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="cidade">Cidade</label>
+            <input
+              id="cidade"
+              value={cidade}
+              onChange={(e) => setCidade(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="cep">CEP</label>
+            <input
+              id="cep"
+              value={cep}
+              onChange={(e) => setCep(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="senha">Senha</label>
+            <input
+              id="senha"
+              type="password"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label htmlFor="cnpj">CNPJ</label>
+            <input
+              id="cnpj"
+              value={cnpj}
+              onChange={(e) => setCnpj(e.target.value)}
+            />
+          </div>
+          <div className="centro-ecologico-form-group">
+            <label>Materiais Aceitos</label>
+            <div className="centro-ecologico-checkbox-group">
+              {materiais.map((material) => (
+                <div key={material}>
+                  <input
+                    type="checkbox"
+                    id={material}
+                    value={material}
+                    checked={materiaisAceitos.includes(material)}
+                    onChange={(e) => {
+                      const checked = e.target.checked;
+                      setMateriaisAceitos((prev) =>
+                        checked ? [...prev, material] : prev.filter((item) => item !== material)
+                      );
+                    }}
+                  />
+                  <label htmlFor={material}>{material}</label>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="centro-ecologico-form-actions">
+            <button type="submit" className="centro-ecologico-btn">Enviar</button>
+            <button type="button" className="centro-ecologico-btn" onClick={handleBack}>Voltar</button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }
 

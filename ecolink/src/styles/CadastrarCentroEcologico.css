@@ -1,0 +1,93 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.centro-ecologico-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.centro-ecologico-header {
+    height: 150px;
+    background: linear-gradient(to left, #207f16, #103f0b);
+    color: white;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centro-ecologico-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background: #f0f0f0;
+}
+
+.centro-ecologico-form {
+    background: white;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px #ccc;
+    max-width: 600px;
+    width: 100%;
+}
+
+.centro-ecologico-form-group {
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input, .centro-ecologico-checkbox-group {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.centro-ecologico-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.centro-ecologico-checkbox-group div {
+    display: flex;
+    align-items: center;
+}
+
+.centro-ecologico-checkbox-group label {
+    margin-left: 0.5em;
+    font-weight: normal;
+}
+
+.centro-ecologico-form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.centro-ecologico-btn {
+    padding: 0.75em 1.5em;
+    background: linear-gradient(to left, #207f16, #103f0b);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.centro-ecologico-btn:hover {
+    background: linear-gradient(to left, #186612, #0d2f08);
+}
