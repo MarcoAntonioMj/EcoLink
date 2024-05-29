@@ -1,48 +1,41 @@
 /* styleTelaDeInicio.css */
 
-.tela-de-inicio-container {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background-size: contain; /* Alterando para 'contain' */
-  background-position: center;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
 }
 
-.tela-de-inicio-main-content {
-  flex-grow: 1;
+header h1 {
+  margin: 0;
+}
+
+section {
   padding: 20px;
+  margin: 20px 0;
 }
 
-.tela-de-inicio-title {
-  text-align: center;
+section h2 {
+  margin-top: 0;
 }
 
-.tela-de-inicio-title h1 {
-  color: #103f0b;
-  font-size: 60px;
+#hero {
+  margin-top: 0;
+  background-color: #28a745;
 }
 
-.tela-de-inicio-first-paragraph {
-  color: #103f0b;
-  text-align: center;
-  margin-bottom: 200px;
-  font-size: 18px;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.tela-de-inicio-sub-text {
-  color: #103f0b;
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 50px;
-  font-weight: bold;
+form .form-group {
+  margin-bottom: 15px;
 }
 
-.tela-de-inicio-last-paragraph {
-  text-align: center;
-}
-
-.tela-de-inicio-last-paragraph p {
-  color: #000000;
-  font-size: 14px;
-  margin-bottom: 50px;
+form button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
 }
