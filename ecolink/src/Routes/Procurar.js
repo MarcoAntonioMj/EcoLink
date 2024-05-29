@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Importe Link para navegação entre rotas
 import Menu from './Menu'; // Importe o componente Menu
 import '../styles/procurar.css'; // Importe o arquivo de estilo sem CSS Modules
 
@@ -82,6 +83,9 @@ const Procurar = () => {
                   </label>
                 </div>
                 <button type="submit">Procurar</button>
+                <div className="voltar-container">
+                  <Link to="/inicio" className="voltar">Voltar</Link> {/* Botão Voltar */}
+                </div>
               </form>
             )}
           </div>

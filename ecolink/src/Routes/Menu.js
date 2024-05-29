@@ -1,7 +1,6 @@
-// Menu.js
-
 import React from 'react';
 import { Link } from 'react-router-dom'; // Importe o componente Link
+import Logo from '../assets/Green Simple Eco Energy Logo (1).png'; // Importe a imagem da logo
 import '../styles/menu.css'; // Importe o arquivo de estilo do menu
 
 const Menu = ({ onLogout }) => {
@@ -13,7 +12,7 @@ const Menu = ({ onLogout }) => {
 
   return (
     <div className="menu-container"> {/* Adicione uma classe container para o menu */}
-      <img src="assets/img/logo.svg" alt="Logo" className="menu-logo" />
+      <img src={Logo} alt="Logo" className="menu-logo" /> {/* Use a imagem importada aqui */}
       <nav className="menu-links">
         <ul>
           <li><Link to="/procurar" className="menu-link">Procurar</Link></li>

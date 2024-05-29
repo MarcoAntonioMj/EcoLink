@@ -38,7 +38,8 @@
 }
 
 .procurarForm input[type="text"],
-.procurarForm button {
+.procurarForm button,
+.procurarForm a {
   padding: 10px 15px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -55,4 +56,27 @@
 
 .procurarForm button:hover {
   background-color: #155e11;
+}
+
+/* Estilo do botão "Voltar" */
+/* Estilo do botão "Voltar" */
+.procurarForm .voltar {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #207f16;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 5; /* Removendo o espaço extra abaixo do botão */
+}
+
+.procurarForm .voltar:hover {
+  background-color: #155e11;
+}
+
+.procurarForm .voltar-container {
+  text-align: right;
+  margin-bottom: 20px; /* Mantendo o espaçamento abaixo do botão igual aos outros elementos */
 }
